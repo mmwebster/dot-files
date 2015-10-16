@@ -26,28 +26,4 @@ set splitright
 set shiftwidth=2
 set noswapfile      " prevent swap files (recoverable changes)
 
-"call plug#begin('~/.vim/plugged')
-"
-""Plugins
-"Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
-"Plug 'kchmck/vim-coffee-script', { 'for': 'coffee' }
-"Plug 'tpope/vim-rails'
-"Plug 'vim-scripts/tComment'
-"Plug 'mustache/vim-mustache-handlebars'
-"
-"call plug#end()
-"
-"let mapleader = ","
-"map <Leader>n :NERDTreeToggle<CR>
-
 set grepprg=git\ grep\ -n
-
-"function! NumberToggle()
-"  if(&relativenumber == 1)
-"    set number
-"  else
-"    set relativenumber
-"  endif
-"endfunc
-"
-"nnoremap <C-n> :call NumberToggle()<cr>
