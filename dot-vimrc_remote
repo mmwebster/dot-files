@@ -25,5 +25,8 @@ set splitbelow
 set splitright
 set shiftwidth=2
 set noswapfile      " prevent swap files (recoverable changes)
+set autoindent
+set smartindent
+set cindent
 
 set grepprg=git\ grep\ -n
