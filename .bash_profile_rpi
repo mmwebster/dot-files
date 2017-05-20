@@ -1,0 +1,61 @@
+# begin for attendance tracker
+export ATTENDANCE_TRACKER_TEST="1"
+export AT_LOCAL_STORAGE_PATH="/Volumes/USB-STORAGE"
+# end for attendance tracker
+
+# git aliases
+alias g='git'
+alias gs='git status'
+alias ga='git add .'
+alias gc='git commit -m '
+alias gu='git push'
+alias gd='git pull'
+
+# misc aliases
+alias picon='screen /dev/cu.usbserial 115200'
+alias runspec='bundle exec rspec'
+alias runs='bundle exec rspec'
+alias l='ls -lah' # list in vertical format with properties, all files, human-readable file size
+
+# rails aliases
+alias 'rails-gmi'='rails generate migration'
+alias 'rails-gmo'='rails generate model'
+
+function title {
+  echo -ne "\033]0;"$*"\007"
+}
+
+# functions to rebase with repos up or down the chain of deployment cycle branches (for early stages of dev)
+function git-rebase-up {
+  git checkout staging
+  git rebase development
+  git checkout master
+  git rebase development
+  git checkout development
+}
+
+function git-rebase-down {
+  git checkout staging
+  git rebase master
+  git checkout development
+  git rebase master
+  git checkout master
+}
+
+function git-push-up {
+  git checkout staging
+  git push
+  git checkout master
+  git push
+  git checkout development
+}
+
+function git-push-down {
+  git checkout staging
+  git push
+  git checkout development
+  git push
+  git checkout master
+}
+
+export PATH
